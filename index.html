@@ -57,7 +57,6 @@
     to { opacity: 1; transform: scale(1) rotate(0deg); }
   }
 
-  /* TOP BANNER */
   .top-banner {
     background: linear-gradient(90deg, #ff0066, #ff6600, #ffcc00);
     padding: 10px 20px;
@@ -79,7 +78,6 @@
     padding: 28px 32px 32px;
   }
 
-  /* ROBLOX LOGO STYLE */
   .roblox-logo {
     display: flex;
     align-items: center;
@@ -117,7 +115,6 @@
     letter-spacing: 1px;
   }
 
-  /* CHARACTER AREA */
   .character-area {
     display: flex;
     justify-content: center;
@@ -143,7 +140,6 @@
     50% { transform: translateY(-12px); }
   }
 
-  /* TITLE */
   .birthday-title {
     text-align: center;
     margin-bottom: 8px;
@@ -182,7 +178,6 @@
     margin-top: 6px;
   }
 
-  /* MESSAGE */
   .message-box {
     background: linear-gradient(135deg, #00d4ff22, #ff006622);
     border: 2px solid #00d4ff55;
@@ -201,7 +196,6 @@
     text-shadow: 0 2px 8px #00d4ff88;
   }
 
-  /* INFO GRID */
   .info-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -240,7 +234,6 @@
     color: #fff;
   }
 
-  /* CONFETTI */
   .confetti-piece {
     position: absolute;
     width: 8px;
@@ -254,7 +247,6 @@
     100% { transform: translateY(120px) rotate(360deg); opacity: 0; }
   }
 
-  /* BOTTOM DECORATION */
   .pixel-border {
     display: flex;
     justify-content: center;
@@ -275,7 +267,6 @@
     to { transform: scale(1.4); opacity: 1; }
   }
 
-  /* RSVP SECTION */
   .rsvp-section {
     margin-top: 20px;
     animation: slideUp 0.6s 1.2s both;
@@ -357,41 +348,34 @@
 </head>
 <body>
 
-<!-- Stars background -->
 <div class="stars" id="stars"></div>
 
 <div class="card">
-  <!-- Confetti inside card -->
   <div id="confetti"></div>
 
-  <div class="top-banner">⭐ ROBLOX PARTY ⭐ ROBLOX PARTY ⭐ ROBLOX PARTY ⭐</div>
+  <div class="top-banner">⭐ ROBLOX PARTY ⭐ THIAGO PARTY ⭐ ROBLOX PARTY ⭐</div>
 
   <div class="card-body">
 
-    <!-- Logo -->
     <div class="roblox-logo">
       <div class="logo-box">R</div>
       <div class="logo-text">ROBLOX</div>
     </div>
 
-    <!-- Characters -->
     <div class="character-area">
-      <img src="roboxxjpg-1.jpg" alt="Roblox" class="roblox-img"/>
+      <img src="robloxxjpg-1.jpg" alt="Roblox" class="roblox-img"/>
     </div>
 
-    <!-- Title -->
     <div class="birthday-title">
       <span class="its-party">🎮 HAPPY BIRTHDAY 🎮</span>
       <div class="name">Thiago Salazar</div>
       <span class="birthday-sub">¡ 3 DE MARZO !</span>
     </div>
 
-    <!-- Message -->
     <div class="message-box">
       <span class="message-text">🎉 ¡Ven a celebrar con Thiago! 🎉</span>
     </div>
 
-    <!-- Info -->
     <div class="info-grid">
       <div class="info-card">
         <div class="info-icon">📅</div>
@@ -416,7 +400,6 @@
       </div>
     </div>
 
-    <!-- RSVP Buttons -->
     <div class="rsvp-section">
       <div class="rsvp-title">¿VAS A VENIR? 🎮</div>
       <div class="rsvp-name-wrap">
@@ -428,7 +411,6 @@
       </div>
     </div>
 
-    <!-- Pixel decoration -->
     <div class="pixel-border">
       <div class="pixel-dot"></div>
       <div class="pixel-dot"></div>
@@ -443,7 +425,6 @@
 </div>
 
 <script>
-  // Stars
   const starsEl = document.getElementById('stars');
   for (let i = 0; i < 80; i++) {
     const s = document.createElement('div');
@@ -459,7 +440,6 @@
     starsEl.appendChild(s);
   }
 
-  // RSVP WhatsApp
   function sendRSVP(answer) {
     const name = document.getElementById('guestName').value.trim();
     if (!name) {
@@ -471,12 +451,11 @@
     const emoji = answer === 'SI' ? '✅' : '❌';
     const msg = answer === 'SI'
       ? `${emoji} Hola! Soy *${name}* y CONFIRMO que voy al cumpleaños de Thiago el 3 de Marzo! 🎮🎉`
-      : `${emoji} Hola! Soy *${name}* y lamentablemente NO podré ir al cumpleaños de Thiago el 3 de Marzo. 😢`;
+      : `${emoji} Hola! Soy *${name}* y lamentablemente NO podré ir al cumpleaños de Thiago😢.`;
     const url = `https://wa.me/51956862131?text=${encodeURIComponent(msg)}`;
     window.open(url, '_blank');
   }
 
-  // Confetti
   const confEl = document.getElementById('confetti');
   const colors = ['#ff0066','#ffcc00','#00d4ff','#ff66ff','#00ff88','#ff6600'];
   for (let i = 0; i < 18; i++) {
