@@ -121,7 +121,6 @@
   .character-area {
     display: flex;
     justify-content: center;
-    gap: 20px;
     margin: 10px 0 20px;
     animation: slideUp 0.6s 0.5s both;
   }
@@ -131,130 +130,18 @@
     to { opacity: 1; transform: translateY(0); }
   }
 
-  .noob {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0;
-    filter: drop-shadow(0 8px 16px #00d4ff44);
+  .roblox-img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    filter: drop-shadow(0 8px 24px #00d4ff88);
     animation: float 3s ease-in-out infinite;
   }
 
-  .noob:nth-child(2) { animation-delay: 0.5s; }
-  .noob:nth-child(3) { animation-delay: 1s; }
-
   @keyframes float {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+    50% { transform: translateY(-12px); }
   }
-
-  /* Pixel Roblox character made with CSS */
-  .head {
-    width: 50px;
-    height: 50px;
-    border-radius: 6px;
-    border: 3px solid #222;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .face {
-    width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(5,1fr);
-    grid-template-rows: repeat(5,1fr);
-  }
-
-  .body-part {
-    width: 40px;
-    height: 44px;
-    border-radius: 4px;
-    border: 3px solid #222;
-  }
-
-  .arm {
-    width: 16px;
-    height: 40px;
-    border-radius: 4px;
-    border: 3px solid #222;
-    margin-top: 4px;
-  }
-
-  .leg {
-    width: 16px;
-    height: 36px;
-    border-radius: 4px;
-    border: 3px solid #222;
-  }
-
-  .char-row {
-    display: flex;
-    align-items: flex-start;
-    gap: 2px;
-  }
-
-  /* Character 1 - Blue noob */
-  .c1 .head { background: #ffcc99; }
-  .c1 .body-part { background: #0055ff; }
-  .c1 .arm { background: #0055ff; }
-  .c1 .leg { background: #006600; }
-
-  /* Character 2 - Red */
-  .c2 .head { background: #ffcc99; }
-  .c2 .body-part { background: #cc0000; }
-  .c2 .arm { background: #cc0000; }
-  .c2 .leg { background: #333; }
-
-  /* Character 3 - Green */
-  .c3 .head { background: #ffcc99; }
-  .c3 .body-part { background: #009900; }
-  .c3 .arm { background: #009900; }
-  .c3 .leg { background: #663300; }
-
-  .char-eyes {
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 8px;
-  }
-  .eye {
-    width: 8px;
-    height: 8px;
-    background: #222;
-    border-radius: 1px;
-  }
-
-  .char-smile {
-    position: absolute;
-    bottom: 22%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 18px;
-    height: 6px;
-    border: 3px solid #222;
-    border-top: none;
-    border-radius: 0 0 10px 10px;
-  }
-
-  /* PARTY HAT */
-  .hat {
-    width: 0;
-    height: 0;
-    border-left: 14px solid transparent;
-    border-right: 14px solid transparent;
-    border-bottom: 26px solid;
-    position: absolute;
-    top: -22px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  .c1 .hat { border-bottom-color: #ffcc00; }
-  .c2 .hat { border-bottom-color: #ff66ff; }
-  .c3 .hat { border-bottom-color: #00ccff; }
 
   /* TITLE */
   .birthday-title {
@@ -489,65 +376,7 @@
 
     <!-- Characters -->
     <div class="character-area">
-      <!-- Char 1 -->
-      <div class="noob c1">
-        <div style="position:relative">
-          <div class="hat"></div>
-          <div class="head">
-            <div class="char-eyes"><div class="eye"></div><div class="eye"></div></div>
-            <div class="char-smile"></div>
-          </div>
-        </div>
-        <div class="char-row" style="margin-top:2px">
-          <div class="arm"></div>
-          <div class="body-part"></div>
-          <div class="arm"></div>
-        </div>
-        <div class="char-row" style="gap:8px; margin-top:2px">
-          <div class="leg"></div>
-          <div class="leg"></div>
-        </div>
-      </div>
-
-      <!-- Char 2 -->
-      <div class="noob c2">
-        <div style="position:relative">
-          <div class="hat"></div>
-          <div class="head">
-            <div class="char-eyes"><div class="eye"></div><div class="eye"></div></div>
-            <div class="char-smile"></div>
-          </div>
-        </div>
-        <div class="char-row" style="margin-top:2px">
-          <div class="arm"></div>
-          <div class="body-part"></div>
-          <div class="arm"></div>
-        </div>
-        <div class="char-row" style="gap:8px; margin-top:2px">
-          <div class="leg"></div>
-          <div class="leg"></div>
-        </div>
-      </div>
-
-      <!-- Char 3 -->
-      <div class="noob c3">
-        <div style="position:relative">
-          <div class="hat"></div>
-          <div class="head">
-            <div class="char-eyes"><div class="eye"></div><div class="eye"></div></div>
-            <div class="char-smile"></div>
-          </div>
-        </div>
-        <div class="char-row" style="margin-top:2px">
-          <div class="arm"></div>
-          <div class="body-part"></div>
-          <div class="arm"></div>
-        </div>
-        <div class="char-row" style="gap:8px; margin-top:2px">
-          <div class="leg"></div>
-          <div class="leg"></div>
-        </div>
-      </div>
+      <img src="roboxxjpg-1.jpg" alt="Roblox" class="roblox-img"/>
     </div>
 
     <!-- Title -->
