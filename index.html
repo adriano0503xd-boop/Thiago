@@ -407,6 +407,15 @@
   </div>
 </div>
 
+<!-- YouTube iframe INVISIBLE - música de fondo -->
+<div style="position:fixed;bottom:-9999px;left:-9999px;width:1px;height:1px;overflow:hidden;">
+  <iframe id="yt-iframe" width="1" height="1"
+    src="https://www.youtube.com/embed/m80z7ZMtpKU?enablejsapi=1&autoplay=0&loop=1&playlist=m80z7ZMtpKU"
+    allow="autoplay"
+    frameborder="0">
+  </iframe>
+</div>
+
 <script>
   /* Stars */
   function makeStars(id, n) {
@@ -425,8 +434,16 @@
   makeStars('splashStars', 80);
   makeStars('stars', 80);
 
+  /* Música arranca al hacer clic en ENTRAR */
+  const iframe = document.getElementById('yt-iframe');
+
   function enterParty() {
     document.getElementById('splash').classList.add('hide');
+    setTimeout(() => {
+      iframe.contentWindow.postMessage(
+        '{"event":"command","func":"playVideo","args":""}', '*'
+      );
+    }, 600);
   }
 
   /* RSVP */
